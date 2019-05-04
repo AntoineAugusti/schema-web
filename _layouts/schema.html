@@ -16,7 +16,7 @@ layout: default
           <li>Version affichée : {{ page.version }}</li>
           <li>Lien vers le schéma : <a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">Schéma {{ page.version }}</a></li>
           <li>Contact : {{ schema_data.email }}</li>
-          <li>Versions disponible :
+          <li>Versions disponibles :
             {% for version in schema_data.versions %}
               <a href="{{ slug | append: '/' | append: version | append: '.html' | relative_url }}">
                 {{ version }}
