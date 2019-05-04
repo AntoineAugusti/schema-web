@@ -11,20 +11,22 @@ layout: default
       {% assign url_parts = page.url | split: '/' %}
       {% assign slug = url_parts[1] | append: "/" | append: url_parts[2] %}
       {% assign schema_data = site.data.schemas[slug] %}
+      <h2>{{ slug }} <small><span class="label">{{ page.version }}</span></small></h2>
       <div class="text-quote">
         <ul>
-          <li>Version affichée : {{ page.version }}</li>
           {% if schema_data.type == "tableschema" %}
           <li> <a href="{{ slug | append: '/' | append: page.version | append: '/documentation.html' | relative_url }}">Documentation du modèle de données</a></li>
           {% endif %}
-          <li>Lien vers le schéma : <a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">schéma {{ page.version }}</a></li>
+          <li><a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">Schéma {{ schema_data.type }} {{ page.version }}</a></li>
           <li>Contact : {{ schema_data.email }}</li>
           <li>Versions disponibles :
+            <ul>
             {% for version in schema_data.versions %}
               <a href="{{ slug | append: '/' | append: version | append: '.html' | relative_url }}">
                 {{ version }}
               </a>
             {% endfor %}
+            </ul>
           </li>
         </ul>
       </div>
