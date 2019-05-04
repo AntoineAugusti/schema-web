@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+<section class="documentation">
+  {% include sidebar.html %}
+  <div class="main-pane">
+    <div class="markdown">
+      {% assign url_parts = page.url | split: '/' %}
+      {% assign slug = url_parts[1] | append: "/" | append: url_parts[2] %}
+      {% assign schema_data = site.data.schemas[slug] %}
+      <div class="text-quote">
+        <ul>
+          <li>Version affichée : {{ page.version }}</li>
+          <li>Lien vers le schéma : <a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">Schéma {{ page.version }}</a></li>
+          <li>Contact : {{ schema_data.email }}</li>
+          <li>Versions disponible :
+            {% for version in schema_data.versions %}
+              <a href="{{ slug | append: '/' | append: version | append: '.html' | relative_url }}">
+                {{ version }}
+              </a>
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+      {{ content }}
+    </div>
+  </div>
+</section>

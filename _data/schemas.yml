@@ -1,0 +1,21 @@
+AntoineAugusti/test-schema:
+  title: Test
+  type: tableschema
+  email: antoine.augusti@data.gouv.fr
+  latest_version: 0.2.0
+  versions:
+    - 0.2.0
+etalab/schema-irve:
+  title: IRVE
+  type: tableschema
+  email: info@data.gouv.fr
+  latest_version: 1.0.0
+  versions:
+    - 1.0.0
+etalab/schema-decp-dpa:
+  title: DECP DPA
+  type: tableschema
+  email: info@data.gouv.fr
+  latest_version: 1.0.0
+  versions:
+    - 1.0.0

@@ -1,0 +1,47 @@
+title: schema.data.gouv.fr
+description: >
+    La documentation de schema.data.gouv.fr
+
+twitter_username: etalab
+github_username:  etalab
+github_repository: etalab/schema.data.gouv.fr
+url: https://schema.data.gouv.fr
+lang: fr
+permalink: pretty
+
+i18n:
+  en:
+    edit: Edit this page
+  fr:
+    edit: Editer cette page
+
+sass:
+    style: compressed
+
+exclude:
+  - README.md
+  - .circleci/circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Collection configuration
+# Specify a directory to store all our collections in the same place
+collections_dir: articles
+
+# Metadata for our collections
+collections:
+  schemas:
+    title: Schémas
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "schemas"
+    values:
+      layout: schema
+
+theme: jekyll-theme-gouvfr
+
+plugins:
+  - jekyll-redirect-from

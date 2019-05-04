@@ -1,0 +1,10 @@
+<nav class="side-pane">
+  <ul class="side-pane__menu">
+    <li class="side-pane__title"><h3>Schémas</h3></li>
+    {% for schema in site.data.schemas %}
+        {% assign slug = schema[0] %}
+        {% assign details = schema[1] %}
+        <a class="side-pane__link" href="{{ slug | append: '/' | append: details.latest_version | append: '.html'  | relative_url }}">{{ details.title }}</a>
+    {% endfor %}
+  </ul>
+</nav>

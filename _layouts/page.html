@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+{% assign lang = page.lang | default: site.lang | default: "en" %}
+<section class="documentation">
+  {% include sidebar.html %}
+  <div class="main-pane">
+    <div class="markdown">
+      {{ content }}
+    </div>
+  </div>
+</section>
