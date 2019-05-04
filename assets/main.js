@@ -17,4 +17,10 @@
       title.appendChild(anchor);
     });
   });
+
+  // Add .table class to all tables
+  tables = document.getElementsByTagName('table');
+  for (index = 0; index < tables .length; ++index) {
+      tables[index].classList.add("table");
+  }
 })();
