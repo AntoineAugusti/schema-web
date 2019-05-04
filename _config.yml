@@ -20,6 +20,7 @@ sass:
 
 exclude:
   - README.md
+  - build.sh
   - .circleci/circle.yml
   - Gemfile
   - Gemfile.lock
