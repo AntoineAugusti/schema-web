@@ -14,7 +14,10 @@ layout: default
       <div class="text-quote">
         <ul>
           <li>Version affichée : {{ page.version }}</li>
-          <li>Lien vers le schéma : <a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">Schéma {{ page.version }}</a></li>
+          {% if schema_data.type == "tableschema" %}
+          <li> <a href="{{ slug | append: '/' | append: page.version | append: '/documentation.html' | relative_url }}">Documentation du modèle de données</a></li>
+          {% endif %}
+          <li>Lien vers le schéma : <a href="{{ '/schemas/' | append: slug | append: '/' | append: page.version | append: '/schema.json' | relative_url }}">schéma {{ page.version }}</a></li>
           <li>Contact : {{ schema_data.email }}</li>
           <li>Versions disponibles :
             {% for version in schema_data.versions %}
