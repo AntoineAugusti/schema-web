@@ -18,7 +18,7 @@
         {% assign slug = schema[0] %}
         {% assign details = schema[1] %}
         <li {% if page.url contains slug %}class="active"{% endif %}>
-          <a class="side-pane__link" href="{{ slug | append: '/' | append: details.latest_version | append: '.html'  | relative_url }}">{{ details.title }}</a>
+          <a class="side-pane__link" href="{{ slug | append: '/latest.html' | relative_url }}">{{ details.title }}</a>
         </li>
     {% endfor %}
   </ul>
