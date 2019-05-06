@@ -28,13 +28,17 @@ exclude:
 
 # Collection configuration
 # Specify a directory to store all our collections in the same place
-collections_dir: articles
+collections_dir: collections
 
 # Metadata for our collections
 collections:
   schemas:
     title: Schémas
     output: true
+  documentation:
+    title: Documentation
+    output: true
+    permalink: /:name
 defaults:
   - scope:
       path: ""

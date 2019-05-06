@@ -97,4 +97,4 @@ theme/node_modules/
 # DS Store (Mac OS)
 *.DS_Store
 
-articles/_schemas
+collections/_schemas
