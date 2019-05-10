@@ -9,6 +9,13 @@ layout: default
   <div class="main-pane">
     <div class="markdown">
       {{ content }}
+      {% if page.url != '/' %}
+      <p class="edit text-center">
+        <a class="button" href="https://github.com/{{ site.github_repository }}/edit/master/collections/{{ page.path }}">
+            ✎ {{ site.i18n[lang].edit }}
+        </a>
+      </p>
+      {% endif %}
     </div>
   </div>
 </section>

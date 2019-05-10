@@ -13,7 +13,7 @@ i18n:
   en:
     edit: Edit this page
   fr:
-    edit: Editer cette page
+    edit: Éditer cette page
 
 sass:
     style: compressed
