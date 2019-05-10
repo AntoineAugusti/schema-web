@@ -13,6 +13,6 @@ Les schémas permettent entre autres de valider qu'un jeu de données se conform
 ## Vers des données de qualité
 Véritables gabarits, ils permettent une montée en qualité des données proposées en open data, surtout lorsque plusieurs producteurs de données produisent un même jeu de données.
 
-Une plateforme de référence nationale permet un accès aux schémas produits par différents acteurs et facilite l'intégration avec des systèmes informatiques par le biais de standards, d'URLs stables, de processus de validation et d'API.
+Une plateforme de référencement nationale permet un accès aux schémas produits par différents acteurs et facilite l'intégration avec des systèmes informatiques par le biais de standards, d'URLs stables, de processus de validation et d'API.
 
 Nous vous invitions à [prendre connaissance d'un schéma](/etalab/schema-irve/latest.html) ou découvrir quelle est la procédure pour [ajouter un schéma](/documentation/ajouter-un-schema).
