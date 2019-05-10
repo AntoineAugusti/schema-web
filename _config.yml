@@ -38,7 +38,7 @@ collections:
   documentation:
     title: Documentation
     output: true
-    permalink: /:name
+    permalink: /:collection/:name
 defaults:
   - scope:
       path: ""
